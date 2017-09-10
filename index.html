@@ -1,0 +1,67 @@
+<html>
+<head>
+	<title>CountDown</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+	<link rel="icon" href="src/img/favicon.ico">
+	<link rel="stylesheet" href="src/css/flipclock.css">
+	<link rel="stylesheet" href="src/css/styles.css">
+	<script src="src/js/jquery-3.2.1.js"></script>			
+	<script src="src/js/flipclock.js"></script>	
+</head>
+<body>
+	<div class="clock"></div>
+	<button class="flat button">Empezar!</button>
+
+	<div id="myModal" class="modal">
+		<div class="modal-content">
+			<form action="#" onsubmit="$('#myModal').css('display','none');$('.flat').focus();update();" autocomplete="off">
+				<p class="title">Ingrese los datos</p>
+				<div class="row">
+					<div class="inputs">
+						<div class="form-group">
+							<label>Hora:</label>
+							<input class="form-control" id="hora" autofocus>
+						</div>
+					</div>
+					<div class="inputs">
+						<div class="form-group">
+							<label>Minutos:</label>
+							<input class="form-control" id="minuto">
+						</div>
+					</div>
+					<div class="inputs">
+						<div class="form-group">
+							<label>Segundos:</label>
+							<input class="form-control" id="segundo">
+						</div>
+					</div>
+					<div class="col-text">
+						<label>Mensaje</label>
+						<input class="form-control" id="mensaje" placeholder="Escribe un mensaje..">
+					</div><br>
+					<button class="bg-green-gradient" type="submit">Aceptar!</button>
+				</div>
+
+				<div class="w3-content">
+					<label class="slide-text"> Elija un fondo</label>
+					<img class="slide-img" src="src/img/fondo0.jpg">
+					<img class="slide-img" src="src/img/fondo1.jpg">
+					<img class="slide-img" src="src/img/fondo2.jpg">
+					<img class="slide-img" src="src/img/fondo3.jpg">
+					<img class="slide-img" src="src/img/fondo4.jpg">
+					<img class="slide-img" src="src/img/fondo5.jpg">
+					<img class="slide-img" src="src/img/fondo6.jpg">
+					<img class="slide-img" src="src/img/fondo7.jpg">
+
+					<a class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</a>
+					<a class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</a>
+				</div>
+
+			</form>
+
+		</div>
+	</div>
+</div>
+</body>
+</html>
+<script src="src/js/script.js"></script>
