@@ -1,28 +1,36 @@
-var clock;
-h = 0;
-m = 0;
-s = 0;
+var clock,
+h = 0,
+m = 0,
+s = 0,
 msj = 'Ha Finalizado!';
 
 $(function() {
-$('#myModal').css('display','block');
+	$('#myModal').css('display','block');
 
-	$("#hora").keyup(function(event) {
+	$("#hora").keyup(function() {
 		h = $(this).val();
 	});
-	$("#minuto").keyup(function(event) {
+	$("#minuto").keyup(function() {
 		m = $(this).val();
 	});
-	$("#segundo").keyup(function(event) {
+	$("#segundo").keyup(function() {
 		s = $(this).val();
 	});
-	$("#mensaje").keyup(function(event) {
+	$("#mensaje").keyup(function() {
 		msj = $(this).val();
 	});
 
-	$('.flat').click(function(e) {
+	$('.flat').click(function() {
 		$(this).fadeOut();
 		clock.start();
+	});
+
+	$('button[type=submit]').click(function(){
+		if (h!='' || m!='' || s!='') {
+			$('#myModal').css('display','none');
+			$('.flat').focus();
+			update();
+		}
 	});
 });
 
